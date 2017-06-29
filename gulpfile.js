@@ -19,11 +19,11 @@ gulp.task('styles', function () {
 gulp.task('minimage', function () {
     gulp.src('img/*.{png,jpg}')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('dist/img'));
 });
 
 gulp.task("htmlmin", function () {
-    gulp.src('index.html')
+    gulp.src('*.html')
         .pipe(minifyHTML({collapseWhitespace: true}))
         .pipe(gulp.dest('dist'));
 });
